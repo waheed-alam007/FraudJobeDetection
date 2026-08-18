@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #14181B;
+    color: #E7E1D2;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Fraunces', serif;
+  }
+
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Paper-toned card used for the intake form and evidence panels */
+  .paper-panel {
+    background: #1B2124;
+    border: 1px solid #2B3236;
+  }
+
+  /* Faint archival grain texture across the page background */
+  .bg-grain {
+    background-image:
+      radial-gradient(rgba(200, 155, 74, 0.05) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Ledger rule under the masthead */
+  .ledger-rule {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(200, 155, 74, 0.5) 0,
+      rgba(200, 155, 74, 0.5) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    height: 2px;
+  }
+
+  /* Ink-stamp seal press animation for the verdict */
+  .stamp-in {
+    animation: stampPress 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  @keyframes stampPress {
+    0% { transform: scale(1.9) rotate(-8deg); opacity: 0; }
+    60% { transform: scale(0.96) rotate(-2deg); opacity: 1; }
+    100% { transform: scale(1) rotate(-2deg); opacity: 1; }
+  }
+
+  .scanning-sweep {
+    animation: sweep 1.6s ease-in-out infinite;
+  }
+
+  @keyframes sweep {
+    0% { top: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+
+  .tick-in {
+    animation: tickIn 0.4s ease-out both;
+  }
+
+  @keyframes tickIn {
+    0% { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 155, 74, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 155, 74, 0.7);
+}
