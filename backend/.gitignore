@@ -1,0 +1,17 @@
+# Git ignore file for sensitive and build files
+.env
+.env.local
+.env.*.local
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+myvenv/
+env/
+node_modules/
+.DS_Store
+*.log
+backend/sentinel.db
