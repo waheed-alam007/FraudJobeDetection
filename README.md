@@ -12,7 +12,7 @@
 - ✅ **Real-time Analysis**: Instant risk scoring (0-100) with explainable red flags
 - ✅ **Automated Reporting**: One-click fraud report sending via Gmail SMTP
 - ✅ **Evidence Visualization**: Interactive UI showing fraud indicators
-- ✅ **Production-Ready**: Docker deployment, environment-based secrets, structured logging
+- ✅ **Production-Ready**: Docker deployment, environment-based secrets, structured logging.
 
 ## Tech Stack
 
@@ -47,9 +47,9 @@
 #### Using Docker (Recommended)
 
 ```bash
-# Clone repository
+# Clone repository here .
 git clone <repo-url>
-cd fake_job_detection
+cd  FAKEJOBDETECTION.
 
 # Copy environment template
 cp backend/.env.example backend/.env
