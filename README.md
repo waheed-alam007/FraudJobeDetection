@@ -1,3 +1,13 @@
+---
+title: FraudLens Backend
+emoji: 🕵️
+colorFrom: yellow
+colorTo: gray
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # FraudLens - AI Job Fraud Detection & Reporting System
 
 🚨 **Live Demo**: _(add your Vercel URL here after deployment)_  
